@@ -1,0 +1,7 @@
+<Alloy>
+	<Window class="container">
+		<Button top="100" id="btn_record" title="Default camera" />
+		<Button top="150" id="btn_overlay" title="Camera with overlay" />
+		<Button top="200" id="btn_without_overlay" title="Camera without overlay" />
+	</Window>
+</Alloy>
