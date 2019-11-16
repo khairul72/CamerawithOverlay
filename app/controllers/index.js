@@ -11,7 +11,7 @@ close_button.addEventListener("click", function() {
 });
 overlay.add(close_button);
 
-function onClickRecord(e) {
+function onClickCamera(e) {
 	helper.getPermissions(function() {
 		Ti.Media.showCamera({
 			success : function(e) {
@@ -21,7 +21,7 @@ function onClickRecord(e) {
 	});
 }
 
-function onClickwithOverlay(e) {
+function onOverlaywithControl(e) {
 	helper.getPermissions(function() {
 		Ti.Media.showCamera({
         mediaTypes: [Ti.Media.MEDIA_TYPE_PHOTO],
@@ -41,7 +41,7 @@ function onClickwithOverlay(e) {
 	});
 }
 
-function onClickwithoutOverlay(e) {
+function onOverlaywithoutControl(e) {
 	helper.getPermissions(function() {
 		Ti.Media.showCamera({
         mediaTypes: [Ti.Media.MEDIA_TYPE_PHOTO],
@@ -61,10 +61,10 @@ function onClickwithoutOverlay(e) {
 	});
 }
 
-$.btn_overlay.addEventListener("click", onClickwithOverlay);
+$.btn_overlay_with_control.addEventListener("click", onOverlaywithControl);
 
-$.btn_without_overlay.addEventListener("click", onClickwithoutOverlay);
+$.btn_overlay_without_control.addEventListener("click", onOverlaywithoutControl);
 
-$.btn_record.addEventListener("click", onClickRecord);
+$.btn_camera.addEventListener("click", onClickCamera);
 
 $.index.open(); 
